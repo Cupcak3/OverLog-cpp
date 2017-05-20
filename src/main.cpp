@@ -1,6 +1,6 @@
 #include <iostream>
-//#include "/SaveAndLoad/load.h"
-#include "SaveAndLoad/save.h"
+#include "SaveAndLoad/load.cpp"
+#include "SaveAndLoad/save.cpp"
 
 #include <fstream>
 #include <string>
@@ -14,22 +14,22 @@ int main()
 {
      //Make and run window until exit run me daddy
      
-     char result = 'w';
+     string result = "win";
      int srChange = 28;
      int endRank = 3800;
      string map = "Numbani";
      int groupSize = 1;
      vector<string> heroes;
-     //heroes[0] = "Genji";
-     //heroes[1] = "NULL";
-     //heroes[2] = "null";
+     heroes.push_back("GEnJI");
+     heroes.push_back("nuLl");
+     heroes.push_back("NULL");
      
-     Saver game1;
+     //Saver game1('w',2,2,"test",1,heroes);
      Saver game(result, srChange, endRank, map, groupSize, heroes);
      cout << "Games made" << endl;
      
      
-     
+    
      
      
      

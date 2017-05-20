@@ -1,11 +1,15 @@
-#include "load.h"
+#ifndef LOAD_CPP
+#define LOAD_CPP
 
-Loader::Loader()
-{
-     
-}
+#include <iostream>
 
-void Loader()
-{
+using namespace std;
+
+class Loader {
+     private:
+     void load();
      
-}
+     public:
+     Loader();
+};
+#endif
