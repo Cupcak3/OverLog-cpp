@@ -2,7 +2,7 @@ CC=g++
 CC_FLAGS=-Wall -Werror -ansi -pedantic
 BINDIR=exec
 
-EXEC=OWLogger
+EXEC=OverLog
 SOURCES=$(wildcard src/*.cpp)
 OBJECTS=$(SOURCES: .cpp=.o)
 

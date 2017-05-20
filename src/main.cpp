@@ -25,14 +25,15 @@ int main()
      heroes.push_back("NULL");
      
      //Saver game1('w',2,2,"test",1,heroes);
-     Saver game(result, srChange, endRank, map, groupSize, heroes);
+     //Saver saveGame(result, srChange, endRank, map, groupSize, heroes);
      cout << "Games made" << endl;
      
+     Loader game1(2);
      
-    
-     
-     
-     
+     if (game1.loaded()) {
+          cout << "game loaded: " << game1.loaded() << endl;
+          game1.print();
+     }
      
      
      

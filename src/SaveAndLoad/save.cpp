@@ -29,7 +29,7 @@ class Saver
           fstream file;
           
           file.open("exec//stats.txt", fstream::app);
-          file << this->result << " " << srChange << " " << endRank << " " << this->map << " ";
+          file << this->result << " " << srChange << " " << endRank << " " << this->map << " " << groupSize;
           for(unsigned i = 0; i < heroes.size(); ++i)
           {
                file << this->heroes.at(i) << " ";
@@ -39,9 +39,13 @@ class Saver
           file.close();
      }
      
+     
+     ///////////////// VARIABLES //////////////////////
      string result, map;
      int srChange, endRank, groupSize, teamSR, enemySR;
      vector<string> heroes;
+     //////////////////////////////////////////////////
+     
      
      public:
      Saver(string result, int srChange, int endRank, string map, int groupSize, vector<string> heroes)
