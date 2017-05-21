@@ -92,9 +92,7 @@ void Data::pushing(const string& result, int SR, int rank, const string& map, in
     bool mapAdded = false;
     bool heroAdded = false;
     results.push_back(result);
-    if (results.back() == "loss") { //makes SR negative if the match was a loss
-        SR *= -1;
-    }
+    
     SRs.push_back(SR);
     ranks.push_back(rank);
     for (unsigned i = 0; i < maps.size(); ++i) { //checks if map is already in list and increments win/loss/tie
