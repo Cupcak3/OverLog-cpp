@@ -2,7 +2,7 @@
 
 Hero::Hero(const string& name, const string& result) {
     heroName = name;
-    heroClass = "";
+    setClass();
     if (result == "win") {
         numLosses = 0;
         numWins = 1;
@@ -18,6 +18,7 @@ Hero::Hero(const string& name, const string& result) {
         numWins = 0;
         numTies = 1;
     }
+    winrate = 0.0;
 }
 
 void Hero::setClass() {
@@ -37,6 +38,7 @@ void Hero::setClass() {
 
 Map::Map(const string& name, const string& result) {
     mapName = name;
+    setType();
     if (result == "win") {
         numLosses = 0;
         numWins = 1;
@@ -51,5 +53,21 @@ Map::Map(const string& name, const string& result) {
         numLosses = 0;
         numWins = 0;
         numTies = 1;
+    }
+    winrate = 0.0;
+}
+
+void Map::setType() {
+    if (mapName == "hanamura" || mapName == "templeofanibus" || mapName == "volskayaindustries") {
+        mapType = "assault";
+    }
+    else if (mapName == "dorado" || mapName == "route66" || mapName == "watchpointgibraltar") {
+        mapType = "escort";
+    }
+    else if (mapName == "eichenwalde" || mapName == "hollywood" || mapName == "kingsrow" || mapName == "numbani") {
+        mapType = "hybrid";
+    }
+    else if (mapName == "oasis" || mapName == "ilios" || mapName == "nepal" || mapName == "lijiangtower") {
+        mapType = "control";
     }
 }
