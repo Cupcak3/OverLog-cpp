@@ -36,7 +36,7 @@ class Loader {
           file.open("exec//stats.txt");
           string line;
           
-          int count;
+          int count = 0;
           while (getline(file,line)) {
                ++count;
           }
@@ -44,6 +44,7 @@ class Loader {
           //make sure can't ask for game that doesn't exist
           if (count <= rowNum) {
                this->bLoaded = false;
+               heroes.resize(3);
                return;
           }
           
@@ -52,7 +53,6 @@ class Loader {
           
           for(unsigned i = 0; i < rowNum; ++i)
           (getline(file,line));
-          cout << line << endl;
           istringstream iss(line);
           iss >> result;
           iss >> srChange;

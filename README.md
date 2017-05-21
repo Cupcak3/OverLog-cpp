@@ -1,3 +1,3 @@
 # GameLogger
 
-This application tracks competitive Overwatch statistics for local, offline use. 
+This application tracks competitive Overwatch statistics for local, offline use. Have fun :D

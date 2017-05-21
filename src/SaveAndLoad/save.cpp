@@ -29,7 +29,7 @@ class Saver
           fstream file;
           
           file.open("exec//stats.txt", fstream::app);
-          file << this->result << " " << srChange << " " << endRank << " " << this->map << " " << groupSize;
+          file << this->result << " " << srChange << " " << endRank << " " << this->map << " " << groupSize << " ";
           for(unsigned i = 0; i < heroes.size(); ++i)
           {
                file << this->heroes.at(i) << " ";
