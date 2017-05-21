@@ -1,4 +1,4 @@
-#ifndef HEROES_H
+#ifndef HEROES_H //TODO: Fix Elias Human Being
 #define HEROES_H
 #include <string>
 using namespace std;
