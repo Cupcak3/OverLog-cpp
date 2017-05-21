@@ -1,4 +1,4 @@
-#ifndef HEROES_H //TODO: Fix Elias Human Being
+#ifndef HEROES_H
 #define HEROES_H
 #include <string>
 using namespace std;
@@ -11,13 +11,17 @@ struct Hero {
     int numTies;
     Hero(const string& name, const string& result);
     void setClass();
+    double winrate;
 };
 
 struct Map {
     string mapName;
+    string mapType;
     int numWins;
     int numLosses;
     int numTies;
     Map(const string& name, const string& result);
+    void setType();
+    double winrate;
 };
 #endif
