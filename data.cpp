@@ -16,13 +16,7 @@ class Data {
     public:
     Data();
     void pushing(const string& result, int SR, int rank, const string& map, int groupSize, const string& hero1, const string& hero2, const string& hero3);
-    void getInput(const string& inputFile);
-    int getHeroSize();
 };
-
-int Data::getHeroSize() {
-    return heroes.size();
-}
 
 //default constructor
 Data::Data() {
@@ -124,43 +118,3 @@ void Data::pushing(const string& result, int SR, int rank, const string& map, in
     totalSRChange += SR;
 }
 
-void Data::getInput(const string& inputFile) { //reads data from the input file
-    ifstream inFS;
-    string result = "";
-    int SR = 0;
-    int rank = 0;
-    string map = "";
-    int groupSize = 0;
-    string hero1 = "";
-    string hero2 = "";
-    string hero3 = "";
-    inFS.open(inputFile.c_str());
-    if (!inFS.is_open()) {
-        cout << "Could not read from file." << endl;
-    }
-    while (!inFS.eof()) {
-        inFS >> result;
-        inFS >> SR;
-        inFS >> rank;
-        inFS >> map;
-        inFS >> groupSize;
-        inFS >> hero1;
-        inFS >> hero2;
-        inFS >> hero3;
-        pushing(result, SR, rank, map, groupSize, hero1, hero2, hero3);
-    }
-    inFS.close();
-}
-
-int main() {
-    Data* matches = new Data();
-    string filename = "";
-    cout << "Enter file name." << endl;
-    cin >> filename;
-    cin.clear();
-    cin.ignore(256, '\n');
-    matches->getInput(filename);
-    for (unsigned i = 0; i < matches->getHeroSize(); ++i) {
-        cout << matches->heroes.at(i)->heroName << " " << matches->heroes.at(i)->numWins << "/" << matches->heroes.at(i)->numLosses << endl;
-    }
-}
