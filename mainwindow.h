@@ -17,9 +17,10 @@ public:
 
 private slots:
     void saveGame();
+
 private:
     Ui::MainWindow *ui;
-    void resetWindow();
+    void resetTab1();
 };
 
 #endif // MAINWINDOW_H

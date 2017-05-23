@@ -35,3 +35,7 @@ HEADERS  += mainwindow.h \
     src/DataManipulation/heroes.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    resources/smeg.png \
+    README.md
