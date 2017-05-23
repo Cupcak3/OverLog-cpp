@@ -24,8 +24,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    src/DataManipulation/data.cpp \
+    src/DataManipulation/heroes.cpp \
+    src/SaveAndLoad/load.cpp \
+    src/SaveAndLoad/save.cpp \
+    src/main_console.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    src/DataManipulation/heroes.h
 
 FORMS    += mainwindow.ui
