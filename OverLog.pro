@@ -38,4 +38,5 @@ FORMS    += mainwindow.ui
 
 DISTFILES += \
     resources/smeg.png \
-    README.md
+    README.md \
+    resources/background.png
