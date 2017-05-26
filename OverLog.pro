@@ -39,4 +39,11 @@ FORMS    += mainwindow.ui
 DISTFILES += \
     resources/smeg.png \
     README.md \
-    resources/background.png
+    resources/background.png \
+    resources/bronze.png \
+    resources/diamond.png \
+    resources/grandmaster.png \
+    resources/master.png \
+    resources/platinum.png \
+    resources/silver.png \
+    resources/gold.png

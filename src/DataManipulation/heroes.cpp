@@ -1,3 +1,5 @@
+#ifndef HEROES_CPP
+#define HEROES_CPP
 #include "heroes.h"
 
 Hero::Hero(const string& name, const string& result) {
@@ -71,3 +73,4 @@ void Map::setType() {
         mapType = "control";
     }
 }
+#endif

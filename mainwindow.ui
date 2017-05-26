@@ -16,11 +16,17 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>OverLog</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="theme"/>
+   <iconset theme="theme">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -30,7 +36,7 @@
     <property name="geometry">
      <rect>
       <x>12</x>
-      <y>740</y>
+      <y>750</y>
       <width>113</width>
       <height>32</height>
      </rect>
@@ -43,7 +49,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>22</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
@@ -55,8 +61,8 @@
      <rect>
       <x>9</x>
       <y>9</y>
-      <width>1251</width>
-      <height>751</height>
+      <width>1250</width>
+      <height>741</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -67,7 +73,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>22</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -110,14 +116,22 @@
      <attribute name="title">
       <string>Enter Game</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="groupFrame">
       <property name="geometry">
        <rect>
-        <x>1110</x>
-        <y>0</y>
-        <width>125</width>
+        <x>1080</x>
+        <y>10</y>
+        <width>141</width>
         <height>90</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -130,7 +144,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -148,8 +162,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <item>
           <property name="text">
@@ -185,14 +202,22 @@
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="heroFrame">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>0</y>
+        <x>520</x>
+        <y>10</y>
         <width>540</width>
         <height>90</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0" alignment="Qt::AlignLeft">
@@ -205,7 +230,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -223,8 +248,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <item>
           <property name="text">
@@ -358,7 +386,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -376,8 +404,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <item>
           <property name="text">
@@ -516,8 +547,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <item>
           <property name="text">
@@ -656,7 +690,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -666,14 +700,22 @@
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="resultFrame">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>0</y>
-        <width>230</width>
+        <y>10</y>
+        <width>171</width>
         <height>160</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -686,7 +728,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -704,8 +746,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="text">
           <string>Win</string>
@@ -722,8 +767,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="text">
           <string>Loss</string>
@@ -740,8 +788,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="text">
           <string>Tie</string>
@@ -750,14 +801,22 @@
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="srFrame">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>300</y>
-        <width>251</width>
-        <height>134</height>
+        <x>10</x>
+        <y>200</y>
+        <width>211</width>
+        <height>170</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -770,7 +829,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -788,8 +847,17 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="minimum">
+          <number>-5000</number>
+         </property>
+         <property name="maximum">
+          <number>5000</number>
          </property>
         </widget>
        </item>
@@ -803,7 +871,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -821,8 +889,14 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="maximum">
+          <number>5000</number>
          </property>
         </widget>
        </item>
@@ -832,8 +906,8 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>440</y>
-        <width>461</width>
+        <y>400</y>
+        <width>361</width>
         <height>16</height>
        </rect>
       </property>
@@ -845,21 +919,29 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>22</pointsize>
+        <pointsize>20</pointsize>
        </font>
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="teamSRFrame">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>470</y>
-        <width>461</width>
+        <y>460</y>
+        <width>361</width>
         <height>141</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="3" column="1">
@@ -872,8 +954,14 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="maximum">
+          <number>5000</number>
          </property>
         </widget>
        </item>
@@ -887,8 +975,14 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="maximum">
+          <number>5000</number>
          </property>
         </widget>
        </item>
@@ -902,7 +996,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -920,7 +1014,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
@@ -938,7 +1032,13 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>22</pointsize>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+           <kerning>true</kerning>
           </font>
          </property>
          <property name="text">
@@ -965,7 +1065,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>22</pointsize>
+        <pointsize>20</pointsize>
        </font>
       </property>
       <property name="text">
@@ -975,129 +1075,189 @@
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="mapFrame">
       <property name="geometry">
        <rect>
-        <x>245</x>
-        <y>0</y>
-        <width>300</width>
-        <height>90</height>
+        <x>210</x>
+        <y>10</y>
+        <width>287</width>
+        <height>91</height>
        </rect>
       </property>
-      <property name="title">
-       <string/>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
       </property>
-      <widget class="QComboBox" name="mapComboBox">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Map</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="mapComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>Dorado</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Eichenwalde</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hanamura</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hollywood</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ilios</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>King's Row</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lijiang Tower</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Numbani</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Oasis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Route 66</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Temple of Anubis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Volskaya Industries</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Watchpoint: Gibraltar</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="rankFrame">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>195</y>
+        <width>251</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_15">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>40</y>
-         <width>263</width>
-         <height>36</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>22</pointsize>
-        </font>
-       </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-       </property>
-       <item>
-        <property name="text">
-         <string>Dorado</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Eichenwalde</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Hanamura</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Hollywood</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Ilios</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>King's Row</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Lijiang Tower</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Numbani</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Oasis</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Route 66</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Temple of Anubis</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Volskaya Industries</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Watchpoint: Gibraltar</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
+         <x>12</x>
          <y>10</y>
-         <width>43</width>
-         <height>26</height>
+         <width>164</width>
+         <height>24</height>
         </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
        </property>
        <property name="font">
         <font>
-         <pointsize>22</pointsize>
+         <pointsize>20</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Map</string>
+        <string>Current Skill Rank:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="skillRankDisplay">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>50</y>
+         <width>89</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="rankSymbolLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>64</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
        </property>
       </widget>
      </widget>
@@ -1111,9 +1271,12 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>1061</width>
-        <height>481</height>
+        <width>1225</width>
+        <height>691</height>
        </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
       </property>
       <property name="sortingEnabled">
        <bool>true</bool>
@@ -1180,7 +1343,7 @@
        <rect>
         <x>370</x>
         <y>190</y>
-        <width>391</width>
+        <width>351</width>
         <height>121</height>
        </rect>
       </property>
@@ -1188,6 +1351,9 @@
        <font>
         <pointsize>24</pointsize>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>Work in progress. Try again later!</string>
@@ -1212,6 +1378,9 @@
         <pointsize>24</pointsize>
        </font>
       </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>Work in progress. Try again later!</string>
       </property>
@@ -1234,6 +1403,9 @@
        <font>
         <pointsize>24</pointsize>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>Work in progress. Try again later!</string>
@@ -1258,7 +1430,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>22</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="frameShape">
@@ -1269,9 +1441,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>resources/background.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

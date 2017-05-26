@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+//#include "src/DataManipulation/data.cpp"
 namespace Ui {
 class MainWindow;
 }
@@ -19,8 +20,11 @@ private slots:
     void onTabChanged(int);
 
 private:
+
     Ui::MainWindow *ui;
+
     void resetTab1();
+    void reloadData();
     QString fixString(std::string mapName);
 };
 

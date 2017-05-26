@@ -1,9 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include <QAbstractSpinBox>
 #include <QKeyEvent>
 #include <QMessageBox>
 #include <algorithm>
+
 #include "src/SaveAndLoad/save.cpp"
 #include "src/SaveAndLoad/load.cpp"
 
@@ -31,8 +33,9 @@ MainWindow::MainWindow(QWidget *parent) :
     //Resize all columns correctly in history tab
     ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
-    //foreach(QWidget *widget, this->findChildren<QWidget*>()) widget->set
 
+
+    reloadData();
 }
 
 MainWindow::~MainWindow()
@@ -55,8 +58,40 @@ void MainWindow::resetTab1()
 
     foreach (QSpinBox *spin, this->ui->enterTab->findChildren<QSpinBox*>())
         spin->setValue(0);
+    reloadData();
+}
 
+void MainWindow::reloadData()
+{
 
+    unsigned i = 1;
+    bool flag = true;
+    unsigned rank;
+    for(i = 1; flag; ++i)
+    {
+        Loader game(i);
+        bool flag = game.loaded();
+        if(!flag)
+        {
+            rank = 0;
+            break;
+        }
+
+        rank = game.getEndRank();
+    }
+    ui->skillRankDisplay->setText(QString::number(rank));
+    QPixmap picture;
+    int w = ui->rankSymbolLabel->width();
+    int h = ui->rankSymbolLabel->height();
+    if(rank <= 1499) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/bronze.png");
+    else if(rank >= 1500 && rank <= 1999) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/silver.png");
+    else if(rank >= 2000 && rank <= 2499) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/gold.png");
+    else if(rank >= 2500 && rank <= 2999) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/platinum.png");
+    else if(rank >= 3000 && rank <= 3499) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/diamond.png");
+    else if(rank >= 3500 && rank <= 3999) picture.load("/Users/Alec/Documents/Projects/OverLog/resources/master.png");
+    else picture.load("/Users/Alec/Documents/Projects/OverLog/resources/grandmaster.png");
+
+    ui->rankSymbolLabel->setPixmap(picture.scaled(w,h));
 }
 
 QString MainWindow::fixString(string word)
@@ -122,12 +157,28 @@ void MainWindow::saveGame()
         QMessageBox popup;
         popup.setText("Please make sure you select if the game was a win, loss, or tie!");
         popup.exec();
+        resetTab1();
         return;
     }
 
+    if((ui->radioLoss->isChecked() && ui->srChangeSpinBox >= 0) ||
+            (ui->radioTie->isChecked() && ui->srChangeSpinBox != 0) ||
+            (ui->radioWin->isChecked() && ui->srChangeSpinBox <= 0))
+    {
+        QMessageBox popup;
+        popup.setWindowTitle("Error");
+        popup.setText("Invalid game entry detected. Make sure to check the result of the game and the points you gained or lost.");
+        popup.exec();
+        resetTab1();
+        return;
+    }
+    unsigned endSR = 0;
+    if(ui->srEndSpinBox->value() < 1) endSR = 1;
+    else endSR = ui->srEndSpinBox->value();
+
     Saver game(result,
                ui->srChangeSpinBox->value(),
-               ui->srEndSpinBox->value(),
+               endSR,
                mapName,
                ui->groupSizeComboBox->currentText().toInt(),
                heroes,
@@ -143,6 +194,9 @@ void MainWindow::saveGame()
 
 void MainWindow::onTabChanged(int tabIndex)
 {
+    reloadData();
+
+
     if(tabIndex == 1)
     {
         ui->historyTable->setRowCount(0);
@@ -153,8 +207,22 @@ void MainWindow::onTabChanged(int tabIndex)
         for(i = 1; flag; ++i)
         {
             Loader game(i);
+
             flag = game.loaded();
             if(!flag) break;
+            //put game into Data object
+            /*
+            data.pushing(game.getResult(),
+                         game.getChange(),
+                         game.getEndRank(),
+                         game.getMap(),
+                         game.getGroupSize(),
+                         game.getHeroes().at(0),
+                         game.getHeroes().at(1),
+                         game.getHeroes().at(2),
+                         game.getTeamSR(),
+                         game.getEnemySR());
+                         */
 
             QString mapName = fixString(game.getMap());
             QString hero1Name = fixString(game.getHeroes().at(0));
